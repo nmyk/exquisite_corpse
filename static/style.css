@@ -1,0 +1,18 @@
+body            { font-family: sans-serif; background: black; }
+a, h1, h2       { color: #66FF00; }
+h1, h2          { font-family: 'Courier', sans-serif; margin: 0; color: #66FF00 }
+h1              { border-bottom: 2px solid #eee }
+h2              { font-size: 1.2em; }
+
+.page           { margin: 2em auto; width: 35em;
+                  padding: 0.8em; background: black; }
+.entries        { list-style: none; margin: 0; padding: 0; color: #ddd }
+.entries li     { margin: 0.8em 1.2em; }
+.entries li h2  { margin-left: -1em; }
+.add-entry      { font-size: 0.9em; color: #66FF00}
+.add-entry dl   { font-weight: bold; color: #66FF00}
+.metanav        { text-align: right; font-size: 0.8em; padding: 0.3em;
+                  margin-bottom: 1em; background: #fafafa; color: #66FF00}
+.flash          { background: black; padding: 0.5em;
+                  color: #66FF00;}
+.error          { background: #F0D6D6; padding: 0.5em; }

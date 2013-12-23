@@ -1,0 +1,14 @@
+<!doctype html>
+<title>exquisite corpse</title>
+<link rel=stylesheet type=text/css href="{{ url_for('static', filename='style.css') }}">
+<div class=page>
+  <h1>exquisite corpse</h1>
+  {% if get_flashed_messages()|length > 0 %}
+    {% for message in get_flashed_messages() %}
+        <div class=flash>{{ message }}</div>
+     {% endfor %}
+  {% else %}
+     <div class=flash>please contribute a line of poetry. the last line of the poem is:</div> 
+  {% endif %}
+  {% block body %}{% endblock %}
+</div>
