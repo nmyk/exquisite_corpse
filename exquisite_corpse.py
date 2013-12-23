@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 """
-    Flaskr
+    bulit from Flaskr
     ~~~~~~
 
     A microblog example application written as Flask tutorial with
@@ -73,7 +73,7 @@ def close_db(error):
 @app.route('/')
 def show_entries():
     db = get_db()
-    cur = db.execute('select text from entries order by id desc')
+    cur = db.execute('select text from entries order by id desc limit 1')
     entries = cur.fetchall()
     cookie_insertion()
     return render_template('show_entries.html', entries=entries)
@@ -98,7 +98,7 @@ def add_entry():
         db.commit()
         flash('thank you!')
         with open('poem','a') as poemfile:
-            poemfile.write(request.form['text']+'\n')
+            poemfile.write(request.form['text'])
         response.set_cookie('my_last_post_id',value=str(get_last_post_id()))
     return response
 
